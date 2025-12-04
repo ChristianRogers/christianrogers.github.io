@@ -10,12 +10,12 @@ const projects = [
     link: "https://m.media-amazon.com/images/I/51Kn4PNRsDL._AC_UF1000,1000_QL80_.jpg",
   },
   {
-    name: "Excel to Labels",
+    name: "Excel2Labels",
     type: "programming",
     language: "Python",
     description:
       "My final project for CSE111. It uses Python libraries to import names and addresses from Excel, store them in a list, and then generate a MS Word file that contains mailing labels.",
-    link: "#",
+    link: "projects/excel2labels.zip",
     img: "#",
   },
   {
