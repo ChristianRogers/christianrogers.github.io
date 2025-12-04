@@ -37,3 +37,26 @@ const projects = [
     img: "#",
   },
 ];
+
+function displayProjects() {
+  let projectsContainer = document.querySelector(".projects-container");
+
+  let filteredProjects = projects.filter(
+    (project) => project.type === "programming"
+  );
+
+  filteredProjects.forEach((filteredProjects) => {
+    let projectDiv = document.createElement("div");
+    projectDiv.classList.add("project-card");
+    projectDiv.innerHTML = `
+      <h3>${filteredProjects.name}</h3>
+      <img src="${filteredProjects.img}" alt="${filteredProjects.name}" />
+      <p><strong>Language:</strong> ${filteredProjects.language}</p>
+      <p>${filteredProjects.description}</p>
+      <a href="${filteredProjects.link}" target="_blank" rel="noopener noreferrer">View Project</a>
+    `;
+    projectsContainer.appendChild(projectDiv);
+  });
+}
+
+displayProjects();
