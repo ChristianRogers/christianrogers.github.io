@@ -17,7 +17,7 @@ const projects = [
     language: "Python",
     description:
       "My final project for CSE111. It uses Python libraries to import names and addresses from Excel, store them in a list, and then generate a MS Word file that contains mailing labels.",
-    link: "projects/excel2labels.zip",
+    link: "projects/labels_port.zip",
     img: "images/excel2labels.webp",
     date: "2025-12",
   },
