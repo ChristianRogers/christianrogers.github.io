@@ -7,7 +7,7 @@ const projects = [
     type: "programming",
     language: "Bash Script",
     description:
-      "This the sole bash script I did in ITM112, a beginning Linux course. It is a simple Rock Paper Scissors game that you can play in Unix terminals like those in Linux and MacOS",
+      "This is a bash script I did in ITM112, a beginning Linux course. It is a simple Rock Paper Scissors game that you can play in Unix terminals like those in Linux and MacOS",
     img: "images/rps_scaffold.webp",
     link: "projects/rps_scaffold.sh",
   },
@@ -52,6 +52,17 @@ const projects = [
     img: "images/creditcard.webp",
     date: "2025-10",
   },
+
+  {
+    name: "Rogers Consumer Law Site",
+    type: "web development",
+    language: "HTML/CSS/JavaScript",
+    description:
+      "My father runs a solo legal practice and for decades had an old 2000s era website built with archaic tools and unsupportive of modern standards. I built this site for him as a modern replacement, built with the modern web, mobile devices, and search engines in mind. I also arranged the hosting and domain name for him. It is much more impressive than my own page, and I'm very proud of how it turned out.",
+    link: "https://christianrogers.github.io/wdd131/rogersconsumerlaw/",
+    img: "images/rogersconsumerlaw.webp",
+    date: "2026-03",
+  },
 ];
 
 function sortbyDate(a, b) {
@@ -62,7 +73,7 @@ function renderProgrammingProjects() {
   let projectsContainer = document.querySelector(".projects-container");
 
   let filteredProjects = projects.filter(
-    (project) => project.type === "programming"
+    (project) => project.type === "programming",
   );
 
   filteredProjects.forEach((project) => {
@@ -83,7 +94,7 @@ function renderWebProjects() {
   let webProjectsContainer = document.querySelector(".web-projects-container");
 
   let filteredProjects = projects.filter(
-    (project) => project.type === "web development"
+    (project) => project.type === "web development",
   );
 
   filteredProjects.forEach((project) => {
@@ -107,3 +118,10 @@ if (document.querySelector(".projects-container")) {
 } else if (document.querySelector(".web-projects-container")) {
   renderWebProjects();
 }
+
+const menuBtn = document.querySelector(".menu-btn");
+const navMenu = document.querySelector("nav");
+
+menuBtn.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
